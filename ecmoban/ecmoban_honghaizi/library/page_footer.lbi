@@ -1,0 +1,132 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $helps}-->
+
+<div class="block">
+<div class="blank10"></div>
+   <div class="helpTitBg clearfix">
+        <div style="float:left; padding:10px 15px 0 0;">
+           <img src="../images/lianxi_bg.gif" alt="联系我们" border="0" usemap="#Map">
+           <map name="Map">
+             <area shape="rect" coords="31,92,153,127" href="#" target="_blank">
+           </map>
+        </div>
+        <div style=" float:left;  border-left:1px solid #bfbfbf; padding:0 22px;  ">
+    
+            <!-- {foreach from=$helps item=help_cat name=no} -->
+            
+            <dl
+                 <!-- {if $smarty.foreach.no.first} -->
+                 style="border-left:none;"
+                  <!-- {/if} -->
+            
+            >
+              <dt>{$help_cat.cat_name}</dt>
+              <!-- {foreach from=$help_cat.article item=item} -->
+              <dd><a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+              <!-- {/foreach} -->
+            </dl>
+            <!-- {/foreach} -->
+        </div>
+         
+  </div>
+</div>
+<div class="blank"></div>
+<!--{/if}-->
+
+
+
+<div class="blank"></div>
+
+
+
+<div class="block" style="text-align:center">
+<img src="../images/bottom.gif" alt="">
+
+</div>
+
+
+<div class="blank"></div>
+
+<!--底部导航 start-->
+<div class="block">
+  <div class="bNavList clearfix">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+           |
+        <!-- {/if} -->
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+   
+  </div>
+</div>
+<!--底部导航 end-->
+<div class="blank"></div>
+<!--版权 start-->
+<div id="footer">
+
+
+
+
+ <div class="text">
+ {$copyright}
+ {$shop_address} {$shop_postcode}
+ <!-- 客服电话{if $service_phone} -->
+      Tel: {$service_phone}
+ <!-- 结束客服电话{/if} -->
+ <!-- 邮件{if $service_email} -->
+      E-mail: {$service_email}<br />
+ <!-- 结束邮件{/if} -->
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} --><br>
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+  <!-- ICP 证书{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
+  <!-- 结束ICP 证书{/if} -->
+
+ {foreach from=$lang.p_y item=pv}{$pv}{/foreach}{$licensed} <br /> <a href=" http://www.ecmoban.com" target="_blank"><img src="../images/ecmoban.gif" alt="ECShop模板" /></a><br />
+    {if $stats_code}
+    <div align="left">{$stats_code}</div>
+    {/if}
+      <br />
+ 
+     
+       
+       
+ </div>
+ 
+ <a href="#" target="_blank"><img src="../images/fot1.gif"></a>
+<a href="#" target="_blank"><img src="../images/fot2.gif"></a>
+<a href="#" target="_blank"><img src="../images/fot3.gif"></a>
+<a href="#" target="_blank"><img src="../images/fot4.gif"></a>
+
+<a href="#" target="_blank"><img src="../images/fot5.gif"></a>
+ 
+
+
+
+<div class="blank"></div>
+</div>

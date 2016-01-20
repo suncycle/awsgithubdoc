@@ -1,0 +1,113 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="themes/ecmoban_honghaizi/qq/images/qq.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='themes/ecmoban_honghaizi/qq/ServiceQQ.js' type='text/javascript' charset='utf-8'></script>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+ 
+<div class="topNav">
+<div class="block " style=" position:relative; z-index:999999999;">
+<a class="a3" href="javascript:void(0)" onclick="javascript:window.external.AddFavorite(window.location.href,'红孩子')">收藏本店</a>
+    {insert_scripts files='transport.js,utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+ 
+  
+
+    <!--{if $navigator_list.top}-->
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            | 
+              <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}  >{$nav.name} </a>
+
+             
+     <!-- {/foreach} -->        
+   <!-- {/if} -->
+</div>
+</div>
+
+
+<div class="header_bg">
+<DIV class="dingtong">
+<DIV style="display: none;" id="dt_small" class="dt_small">
+<DIV style="display: none;" id="dt_toBig" class="dt_toBig"></DIV>
+<A href="#" target="_blank">
+<IMG src="../images/home_tonglan_1347239615_7.jpg">
+</A>
+</DIV>
+<DIV style="display: none;" id="dt_big" class="dt_big">
+<DIV id="dt_toSmall" class="dt_toSmall"></DIV>
+<A href="#" target="_blank">
+<IMG id="tonglanzhankaiimg" realsrc="../images/home_toptonglanzhankai_1347239663_5.jpg">
+</A>
+</DIV></DIV>
+<div class="block clearfix" style="height:82px;">
+<div style="float:left; padding-top:8px;"><a href="../index.php" name="top"><img src="../images/logo.gif" /></a></div>
+<div style="float:left; padding-left:12px; padding-top:8px;"><a href="../index.php" name="top"><img src="../images/i.gif" /></a></div>
+<script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+             alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    <div class="search_box" >
+ <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_l"  >
+
+  <div style="float:left; padding:3px 10px 3px 26px">
+    <input name="keywords" type="text" id="keyword"  value="乐天bestmom奶粉" onclick="javascript:this.value='';"   class="B_input" />
+  </div> 
+   <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+ </form>
+ <div class="keys">
+     {if $searchkeywords}
+     热门搜索：
+   {foreach from=$searchkeywords item=val}
+    <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   {/if}
+</div> 
+</div> 
+
+ <div class="search_r">
+ 
+
+ 
+<div class="buy_car_bg" id="ECS_CARTINFO">
+<a href="flow.php">{insert name='cart_info'}</a>
+</div> 
+<a href="flow.php?step=checkout" class="qujiesuan"></a>
+
+
+
+</div> 
+</div>
+ 
+
+
+</div>
+
+
+
+<div id="mainNav">
+<div class="block">
+
+  <a   href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home} <span></span> </a>
+  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+  <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.name}  <span></span></a>
+ <!-- {/foreach} -->
+</div>
+</div>
+
+
+
+<div  class="blank"></div>
